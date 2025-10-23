@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS Features Demo</title>
+</head>
+<body>
+
+<h2>Fat Arrow Functions</h2>
+<div id="output"></div>
+
+<h2>Destructuring</h2>
+<div id="destructOutput"></div>
+
+<script>
+  const showMessage = () => {
+    document.getElementById("output").textContent = "I am fat arrow";
+  }
+
+  showMessage();
+
+  // Destructuring Example
+  const person = { name: "Alice", age: 25, city: "New York" };
+  const { name, age, city } = person;
+
+  const colors = ["Red", "Green", "Blue"];
+  const [first, second, third] = colors;
+
+  document.getElementById("destructOutput").textContent = 
+    "Person: " + name + ", " + age + ", " + city + 
+    " | Colors: " + first + ", " + second + ", " + third;
+</script>
+
+</body>
+</html>
